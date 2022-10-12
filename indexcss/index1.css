@@ -53,6 +53,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: auto;
 }
 
 .header__item{
