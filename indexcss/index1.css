@@ -31,7 +31,7 @@ header{
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    width: auto;
+    width: 100%;
 }
 
 .header__logo{
@@ -146,14 +146,12 @@ article:hover{
     width: auto;
     height:200px;
     border-radius: 15px 15px 0px 0px;
-    overflow: hidden;
 }
 .card__img__prod{
     height: 200px;
     padding: 10px;
     width: auto;
     border-radius: 10px;
-    overflow:hidden;
 }
 
 .card__text__prod{
@@ -161,6 +159,7 @@ article:hover{
     text-align: center;
     justify-content: center;
     margin: 5px;
+    width: auto;
 }
 
 .card__price__prod{
@@ -169,6 +168,7 @@ article:hover{
     position: absolute;
     bottom: 10px;
     left: 5px;
+    width: auto;
 }
 
 .card__img__new{
@@ -181,6 +181,7 @@ article:hover{
     text-align: center;
     justify-content: center;
     margin: 1rem 3px 3px 3px;
+    width: auto;
 }
 .card__date__new{
     background-color: #000000;
@@ -188,6 +189,7 @@ article:hover{
     position: absolute;
     bottom: 10px;
     left: 5px;
+    width: auto;
 }
 
 .card__all__serv{
@@ -325,10 +327,9 @@ input[type=submit]{
 @media screen and (max-width: 1024px)
 {
     
-    .header__all{
+    header{
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
     .header__logo{
         padding: 10px 10px 0px 10px;
@@ -337,6 +338,7 @@ input[type=submit]{
         margin-left: 10px;
         transform: translateX(0px);
     }
+
     .publici{
         width: 600px;
         height: auto;
@@ -464,18 +466,9 @@ input[type=submit]{
 
 @media screen and (max-width: 768px){
     *{
-        background-color: #1a1c23
+        background-color: #1a1c23;
     }
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-    .header__logo{
-        display: flex;
-        padding: 10px 10px 0px 10px;
-        width: 470px;
-        height: auto;
-    }
+
     .publici{
         width: 600px;
         height: auto;
@@ -530,7 +523,7 @@ input[type=submit]{
      input[type=submit]{
          color: white;
      }
-    .footer__all{
+    footer{
         display: block;
     }
     .footer__text{
@@ -586,172 +579,42 @@ input[type=submit]{
 }
 
 
-
-
-/**480**/
-
-@media screen and (max-width: 480px){
-    *{
-        background-color: #1a1c23
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-    .header__logo{
-        display: flex;
-        padding: 10px 10px 0px 10px;
-        width: 470px;
-        height: auto;
-    }
-
-    .header__lista{
-        background-color: black;
-        padding: 0px;
-        margin: 0rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .publici{
-        width: 470px;
-        height: auto;
-    }
-
-    section{
-        justify-content: center;
-    }
-    h1{
-        font-size: 1rem;
-        margin: 5px;
-    }
-
-    h2{
-        font-size: 1rem;
-    }
-
-    input[type=text] {
-        margin: 3px 0px 3px 0px;
-        color: white;
-        font-size: 1rem;
-     }
-     
-     input[type=email] {
-         margin: 3px 0px 3px 0px;
-         color: white;
-         font-size: 1rem;
-      }
-     
-      input[type=number] {
-         margin: 3px 0px 3px 0px;
-         color: white;
-         font-size: 1rem;
-      }
-      
-      input[type=descrip] {
-         margin: 3px 0px 3px 0px;
-         color: white;
-         font-size: 1rem;
-      }
-     
-      input[type=password] {
-         margin: 3px 0px 3px 0px;
-         color: white;
-         font-size: 1rem;
-      }
-     
-     input[type=search]{
-         color: white;
-         font-size: 1rem;
-     }
-     input[type=submit]{
-         color: white;
-     }
-    .footer__all{
-        display: block;
-    }
-    .footer__text{
-        padding-top: 2px;
-    }
-    .footer__text1{
-        margin-top: 10px;
-    }
-    
-    .card__all__serv{
-        position: relative;
-        background-color: #000000;
-        margin: 10px;
-        border-style: groove;
-        border-color: white;
-    }
-    
-    .card__in__serv{
-        display: flex;
-        justify-content: space-between;
-        align-items:center ;
-        border-style: groove;
-        border-color: #000000;
-    }
-    
-    .card__inimg__serv{
-        width: auto;
-        height: 150px;
-    }
-    
-    .card__intext__serv{
-        color:white;
-        text-align: center;
-        padding: 10px;
-        font-size: 15px;
-    }
-    .footer__lista{
-        display: flex;
-        background-color: #000000;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .footer__item{
-        margin:1rem 4rem 1rem 1rem ;
-    }
-    
-    .footerimg{
-        background-color: #000000;
-        width: auto;
-        height:45px;
-    }
-}
-
-
 /**320**/
 
 @media screen and (max-width: 320px){
     *{
-        background-color: #1a1c23
+        background-color: #1a1c23;
     }
 
-    .header__all{
+    header{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 320px;
     }
 
     .header__logo{
-        display: flex;
-        padding: 10px 10px 0px 10px;
-        width: 310px;
+        display: block;
+        padding: 10px;
+        width: 300px;
         height: auto;
-        margin-left: 0px;
     }
 
+   .header__item1{
+    width: 100px;
+
+   }
+    
+
+
     .publici{
-        width: 310px;
+        width: 300px;
         height: auto;
     }
 
     section{
         justify-content: center;
+        width: 320px;
     }
 
     h1{
@@ -796,9 +659,10 @@ input[type=submit]{
         margin: 1rem;
     }
     
-    .footer__all{
+    footer{
         display: block;
         font-size: 0.9rem;
+        width: 320px;
     }
     .footer__text{
         padding-top: 2px;
