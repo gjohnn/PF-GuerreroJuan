@@ -11,7 +11,7 @@ h2{
 
 }
 body{
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 .container{
@@ -23,6 +23,8 @@ body{
     gap: 5px;
 }
 
+/* -------------------------------------- HEADER -------------------------------------- */
+
 header{
     grid-area: header;
     background: linear-gradient(rgba(0,0,0,1) 30%, rgba(0,0,0,1) 68%, rgba(0,0,0,1) 90%, rgba(26,28,35,1) 100%);
@@ -31,7 +33,6 @@ header{
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 .header__logo{
@@ -87,6 +88,7 @@ header{
     text-decoration: none;
 }
 
+/* --------------------------------------------- HOME -------------------------------------------*/
 .cartbien{
     margin-top: 1rem;
     font-size: 2rem;
@@ -95,12 +97,16 @@ header{
     text-align: center;
 }
 
+.publicicontainer{
+    height: 400px;
+}
 .publici{
-display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  transition: border 0.1s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    transition: border 0.1s;
+    height: 400px;
 }
 
 .publici:hover{
@@ -110,6 +116,8 @@ display: block;
 main{
     grid-area: main;
 }
+
+/* -----------------------------------------    CARDS  ----------------------------------------*/
 .main__title{
     font-family: Orbitron , sans-serif;
     color: rgb(255, 255, 255);
@@ -171,10 +179,19 @@ article:hover{
     width: auto;
 }
 
-.card__img__new{
-    height: 177px;
+
+/* --------------------- HOMEEEE NOTICIAS --------------------*/
+
+.card__imgcontainer_new{
     width: auto;
-    border-radius: 14px 14px 0px 0px;
+    height:180px;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+    background-color: #000000;
+}
+.card__img__new{
+    height: 180px;
+    width: auto;
 }
 .card__text__new{
     background-color: black;
@@ -192,10 +209,11 @@ article:hover{
     width: auto;
 }
 
+/* ---------------------------- SERVICIO TÉCNICO -----------------------------------*/
 .card__all__serv{
     position: relative;
     background-color: #000000;
-    margin: 10px;
+    margin: 10px 50px 10px 50px;
     border-style: groove;
     border-color: white;
 }
@@ -219,7 +237,7 @@ article:hover{
     font-size: 50px;
 }
 
-
+/* ------------------------------------ FOOTER --------------------------------------------------- */
 
 footer{
     grid-area: footer;
@@ -282,6 +300,8 @@ footer{
     text-align: center;
 }
 
+/* -------------------------------------- INPUT ------------------------------------------- */
+
 input[type=text] {
    margin: 3px 0px 3px 0px;
    color: white;
@@ -316,13 +336,10 @@ input[type=submit]{
 
 
 
+/*  -----------------------------------------------   MEDIA QUERY    --------------------------------------------*/
 
 
-
-
-
-
-/**1024**/
+/**-------------------------------------   1024px -------------------------------**/
 
 @media screen and (max-width: 1024px){
    
@@ -457,7 +474,7 @@ input[type=submit]{
 
 
 
-
+/**-------------------------------------   768px -------------------------------**/
 
 
 
@@ -577,19 +594,46 @@ input[type=submit]{
     }
 }
 
+/*-------------------------------------   480px -------------------------------*/
+
+/*480*/
+
+@media screen and (max-width: 480px) {
+
+  
+
+   .publicicontainer{
+    height: 300px;
+    width: auto;
+   }
+   .publici{
+    height: 300px;
+    width: auto;
+   }
+   
+    
+}
+
+
+
+
+
+
+/**-------------------------------------   320px -------------------------------**/
 
 /**320**/
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 320px){
     *{
         background-color: #1a1c23;
+        
     }
 
     header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: auto;
+       
     }
 
     .header__logo{
@@ -601,19 +645,28 @@ input[type=submit]{
 
    .header__item1{
     width: 100px;
-
    }
     
-
-
+   .publicicontainer{
+     height: 200px;
+     width: 320px;
+   }
     .publici{
         width: 300px;
         height: auto;
     }
 
+    main{
+        width: 320px;
+    }
+
     section{
         justify-content: center;
         width: 320px;
+    }
+
+    .main__title{
+        font-size: 1.3rem;
     }
 
     h1{
@@ -720,3 +773,5 @@ input[type=submit]{
         height:40px;
     }
 }
+
+/*-------------------------------------------------------------------------------------------------------*/
