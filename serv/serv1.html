@@ -10,35 +10,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href=".././indexcss/index1.css">
     <title>MendoTechno - Servicio Técnico</title>
 </head>
-<body class="body__margin">
-    <header class="header__all">
+<!--------------------------------------------------------- BODY -------------------------------------------------->
+<body>
+    <!---------------------------------------------------- HEADER -------------------------------------------------->
+    <header class="container-fluid">
         <img src="logo.png" alt="Logo" class="header__logo">
-        <ul class="header__lista">
-            <li class="header__item"><a class="header__item1" href="../index.html">Home</a></li>
-            <li class="header__item"><a class="header__item1" href="../prod/prod1.html">Productos</a></li>
-            <li class="header__item"><a class="header__item--active" href="serv1.html">Servicio Técnico</a></li>
-            <li class="header__item"><a class="header__item1" href="../mimen/mimen.html">MiMendo</a></li>
-            <li class="header__item"><a class="header__item1" href="../contac/contac1.html">Contacto</a></li>
-        </ul>
+        <nav class="navbar navbar-expand-lg bg-light p-0">
+            <div class="container-fluid p-0 m-0 background-in">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse background-in" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 background-in">
+                  <li class="nav-item border border-light border-2 m-2">
+                    <a class="nav-link active text-light background-in" aria-current="page" href=".././index.html">Home</a>
+                  </li>
+                  <li class="nav-item border border-light border-2 m-2">
+                    <a class="nav-link text-light background-in" href=".././prod/prod1.html">Productos</a></li>
+                    <li class="nav-item border border-light border-2 m-2">
+                        <a class="nav-link text-light background-in text-start align-middle opacity-50" href="serv1.html">ServicioMendo</a>
+                  </li>
+                  <li class="nav-item border border-light border-2 m-2">
+                    <a class="nav-link text-light background-in" href=".././mimen/mimen.html">MiMendo</a>
+              </li>
+              <li class="nav-item border border-light border-2 m-2">
+                <a class="nav-link text-light background-in" href=".././contac/contac1.html">Contacto</a>
+          </li>
+                </ul>
+                <form class="d-flex background-in" role="search">
+                  <input class="form-control me-2 background-in" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
     </header>
-    <hr>
     <main>
+        <!--CUADRO ENTERO-->
     <div class="card__all__serv">
-        <div class="card__in__serv">
-            <img class="card__inimg__serv" src="./servimg/pcs.jpg" alt="Arreglar PC">
+        <div class="card__in__serv"> <!-- CUADRO 1 -->
+            <img class="card__inimg__serv img-fluid" src="./servimg/pcs.jpg" alt="Arreglar PC">
             <p class="card__intext__serv">Realizamos servicio técnico a todos nuestros clientes de Mendoza</p>
         </div>
-        <div class="card__in__serv">
+        <div class="card__in__serv"> <!-- CUADRO 2 -->
             <p class="card__intext__serv">Optimizamos PCs tanto nuevas como viejas para que tu equipo tenga el máximo rendimiento</p>
-            <img class="card__inimg__serv" src="./servimg/optimize.jpg" alt="Optimización">
+            <img class="card__inimg__serv im-fluid" src="./servimg/optimize.jpg" alt="Optimización">
         </div>
     </div>
     </main>
-
-    <footer class="footer__all">
+<!-- ------------------------------------------ FOOTER ----------------------------------------------------------->
+    <footer class="container-fluid">
         <div class="footer__textall">
         <p class="footer__text">Avenida Siempre Viva 742, Mendoza, Argentina</p>
         <p class="footer__text">Tel: +56 231 786 3907</p>
@@ -75,4 +100,5 @@
     </ul>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </html>
