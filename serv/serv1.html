@@ -17,8 +17,9 @@
 <!--------------------------------------------------------- BODY -------------------------------------------------->
 <body>
     <!---------------------------------------------------- HEADER -------------------------------------------------->
-    <header class="container-fluid">
-        <img src="logo.png" alt="Logo" class="header__logo">
+    <header>
+        <img src="logo.png" alt="Logo" class="header__logo img-fluid">
+        <!---------------------- NAV   --------------------------->
         <nav class="navbar navbar-expand-lg bg-light p-0">
             <div class="container-fluid p-0 m-0 background-in">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +28,7 @@
               <div class="collapse navbar-collapse background-in" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 background-in">
                   <li class="nav-item border border-light border-2 m-2">
-                    <a class="nav-link active text-light background-in" aria-current="page" href=".././index.html">Home</a>
+                    <a class="nav-link active text-light background-in " aria-current="page" href=".././index.html">Home</a>
                   </li>
                   <li class="nav-item border border-light border-2 m-2">
                     <a class="nav-link text-light background-in" href=".././prod/prod1.html">Productos</a></li>
@@ -49,23 +50,26 @@
             </div>
           </nav>
     </header>
-    <main>
-        <!--CUADRO ENTERO-->
+<main>   <!--CUADRO ENTERO-->
     <div class="card__all__serv">
-        <div class="card__in__serv container-fluid"> <!-- CUADRO 1 -->
-           <div>
-            <img class="card__inimg__serv img-fluid" src="./servimg/pcs.jpg" alt="ArreglarPC">
+        <div class="card__in__serv"> <!-- CUADRO 1 -->
+            <div class="card__inimg__serv">
+                <img class="img-fluid" src="./servimg/pcs.jpg" alt="ArreglarPC">
+            </div>
+            <div>
+                <p class="card__intext__serv">Realizamos servicio técnico a todos nuestros clientes de Mendoza</p>
+            </div>
         </div>
-        <div>
-            <p class="card__intext__serv">Realizamos servicio técnico a todos nuestros clientes de Mendoza</p>
-        </div>
-        </div>
-        <div class="card__in__serv container-fluid"> <!-- CUADRO 2 -->
-            <p class="card__intext__serv">Optimizamos PCs tanto nuevas como viejas para que tu equipo tenga el máximo rendimiento</p>
-            <img class="card__inimg__serv img-fluid" src="./servimg/optimize.jpg" alt="Optimización">
+        <div class="card__in__serv1"> <!-- CUADRO 1 -->
+            <div class="card__inimg__serv">
+                <img class="img-fluid" src="./servimg/optimize.jpg" alt="ArreglarPC">
+            </div>
+            <div>
+                <p class="card__intext__serv">Optimizamos tu PC para tengas el máximo rendimiento </p>
+            </div>
         </div>
     </div>
-    </main>
+</main>
 <!-- ------------------------------------------ FOOTER ----------------------------------------------------------->
 <footer>
     <div class="footer-content">
