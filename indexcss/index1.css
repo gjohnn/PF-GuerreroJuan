@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+
+
 *{
     background-color: #1a1c23;
     box-sizing: border-box;
@@ -53,6 +56,7 @@ nav{
     background-color: #000000;
 
 }
+
 .background-trans{
     background: none;
 }
@@ -271,87 +275,125 @@ article:hover{
 
 /* ------------------------------------ FOOTER --------------------------------------------------- */
 
-footer{
-    grid-area: footer;
-    background: #111;
-    height: auto;
-    width: auto;
+.footer *{
+    padding: 10px 0px;
+    background: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-f *{
+    background: rgb(0, 0, 0);
+    max-width: 1170px;
+    margin: auto;
     padding: 0px;
+}
+
+.roww{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.footer-col{
     color: white;
-    background-color: #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin: 0px;
+    padding: 0rem;
+    background-color:none;
+    display:inline-block;
+    width: auto;;
 }
 
-.footer div{
-    background-color: #1a1c23;
+.footer-col ul{
+    
+    padding:0rem;
+    margin: 0px;
+}
+.footer-col li{
+    padding:0rem;
+    margin: 0;
+    color:grey;
+    transition: all 0.5s;
 }
 
-.footer-content{
-    display: flex;
-    justify-content: space-around;
-    background-color: #000000;
-    align-items: center;
+.footer-col li:hover{
+    padding-left: 1px;
+    color: white;
 }
 
-.footer-content div{
-    background-color: black;
-    margin: 10px;
-    justify-content: center;
-}
-
-.footer-content a{
-    text-align: center;
+.footer-col a {
+    margin:0;
+    padding: 0;
     text-decoration: none;
-    color: white;
-    background-color: #000000;
+    color:grey;
+    transition: all 0.5s;
 }
 
-.socials{
+.footer-col a:hover{
+    color: white;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0px 10px 0px;
+    text-align: start;
+    text-transform: capitalize;
+    border-bottom: solid white 2px;
+  
+}
+
+.social-links{
+    padding: 0;
+}
+
+.footer-col .social-links ul{
     display: flex;
-    background-color: #000000;
-    align-items: center;
-    justify-content: space-around;
-    width: auto;
-    margin: 10px;
+    flex-direction: row;
+
+}
+
+
+.footer-col .social-links a{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    background-color:grey;
+    margin-right: 10px;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.5s ;
+}
+
+.footer-col .social-links a:hover{
+    background-color: white;
+}
+
+.footer-col .social-links i{
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color:white;
+    background: none;
+    transition: all 0.5s;
+}
+
+.footer-col .social-links i:hover{
+    color:black;
     
 }
-.socials a{
-    background-color: #000000;
-    color: #000000;
-    text-decoration: none;
-}
-
-.socials img{
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-    width: 50px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.socials li{
-    margin: 10px;
-}
-
-.nov-footer{
-    background-color:black;
-}
-
- 
-.section__form1{
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    background-color: #1a1c23;
-    background: #1a1c23;
-    font-family: Orbitron, sans-serif;
-    text-align: center;
-}
-
+    
 /* -------------------------------------- INPUT ------------------------------------------- */
 
 input[type=text] {
@@ -570,6 +612,20 @@ input[type=submit]{
         background-color: #1a1c23;
     }
 
+    .roww{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .footer-col{
+        padding: 10px;
+
+    }
+    
+
+
+
     .publici__text__container{
         position: absolute; 
         display: flex;
@@ -631,16 +687,6 @@ input[type=submit]{
      input[type=submit]{
          color: white;
      }
-    footer{
-        display: block;
-        flex-direction: column;
-    }
-    .footer__text{
-        padding-top: 2px;
-    }
-    .footer__text1{
-        margin-top: 10px;
-    }
     
     .card__all__serv{
         justify-content: center;
@@ -661,31 +707,9 @@ input[type=submit]{
         text-align: center;
         padding: 10px;
         font-size: 15px;
+    }
 }
 
-/*-------------------------------------   480px -------------------------------*/
-
-/*480*/
-
-@media screen and (max-width: 768px){
-    .nov-footer{
-        display: flex;
-        flex-direction: column;
-        margin:0px;
-        justify-content: center;
-        background-color: #000000;
-    }
-
-    .nov-footer label{
-        justify-content: center;
-    }
-
-    input[type=email] {
-        margin: 3px 3px 3px 3px;
-        color: white;
-        
-     }
-}
 
 
 /**-------------------------------------   320px -------------------------------**/
@@ -753,11 +777,6 @@ input[type=submit]{
         margin: 1rem;
     }
     
-    footer{
-        overflow: hidden;
-        display: block;
-        font-size: 0.9rem;
-    }
 
     .card__img__new{
         height: 177px;
@@ -793,4 +812,4 @@ input[type=submit]{
         font-size: 10px;
     }
 
-}}
+}
