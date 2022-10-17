@@ -84,12 +84,7 @@ p{
 }
     
 .nav-item:hover{
-     border-color: rgb(95, 2, 2);
-}
-
-.nav-link{
-     width: auto;
-     height:auto;
+     border-color: rgb(1, 0, 80);
 }
 
 /* --------------------------------------------- HOME -------------------------------------------*/
@@ -142,7 +137,7 @@ main{
     grid-area: main;
     background-color: #1a1c23;
     background: #1a1c23;
-    margin: 0px;
+    margin: 10px;
     color: #1a1c23;
 }
 
@@ -244,22 +239,20 @@ article:hover{
 .card__all__serv{
     position: relative;
     background-color: #000000;
-    margin: 10px 50px 10px 50px;
+   
     border-style: groove;
     border-color: white;
 }
 
 .card__in__serv{
-    display: flex;
     justify-content: space-between;
     align-items:center ;
-    border-style: groove;
-    border-color: #000000;
 }
 
 .card__inimg__serv{
     width: 600px;
     height: auto;
+    margin:1rem;
 }
 
 .card__intext__serv{
@@ -278,7 +271,6 @@ footer{
     width:auto;
     height:130px;
     display: flex;
-    margin:0px;
 }
 
 .footer__textall{
@@ -317,10 +309,6 @@ footer{
     width: auto;
     height:50px;
     transition: height 0.3s;
-}
-
-.footerimg:hover{
-    height: 55px;
 }
 
 .section__form1{
@@ -381,6 +369,17 @@ input[type=submit]{
 /**-------------------------------------   1024px -------------------------------**/
 
 @media screen and (max-width: 1024px){
+
+    .card__in__serv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center ;
+        border-style: groove;
+        border-color: #000000;
+        overflow: hidden;
+        
+    }
    
     header{
         display: flex;
@@ -483,7 +482,6 @@ input[type=submit]{
     }
     
     .card__inimg__serv{
-        width: auto;
         height: 350px;
     }
     
@@ -604,6 +602,7 @@ input[type=submit]{
     }
     
     .card__all__serv{
+        justify-content: center;
         position: relative;
         background-color: #000000;
         margin: 10px;
@@ -611,13 +610,7 @@ input[type=submit]{
         border-color: white;
     }
     
-    .card__in__serv{
-        display: flex;
-        justify-content: space-between;
-        align-items:center ;
-        border-style: groove;
-        border-color: #000000;
-    }
+
     
     .card__inimg__serv{
         width: auto;
@@ -756,6 +749,8 @@ input[type=submit]{
          margin: 3px 0px 3px 0px;
          color: white;
          font-size: 1rem;
+         width: 300px;
+         height: 200px;
     }
      
       input[type=password] {
