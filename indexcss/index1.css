@@ -258,8 +258,6 @@ article:hover{
     display: flex;
     flex-direction: column;
     background-color: #1a1c23;
-    border-style: groove;
-    border-color: white;
     margin: 1rem;
 }
 
@@ -267,7 +265,7 @@ article:hover{
     justify-content: space-around;
     align-items:center ;
     display: flex;
-    border-bottom: solid 2px white;
+    border: solid 2px white;
 
 }
 
@@ -276,7 +274,7 @@ article:hover{
     align-items:center ;
     display: flex;
     flex-direction: row-reverse;
-    border-top: solid 2px white;
+    border: solid 2px white;
 }
 
 .card__inimg__serv{
@@ -361,7 +359,7 @@ ul{
     font-size: 18px;
     color: white;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     position: relative;
     padding: 10px 0px 10px 0px;
     text-align: start;
@@ -575,10 +573,8 @@ input[type=submit]{
 
     .card__all__serv{
         position: relative;
-        background-color: #000000;
+        background-color: #1a1c23;
         margin: 10px;
-        border-style: groove;
-        border-color: white;
     }
     
     .card__in__serv{
@@ -631,7 +627,7 @@ input[type=submit]{
     .roww{
         display: flex;
         flex-direction: column;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 1rem 0px 1rem;
     }
 
 
@@ -688,10 +684,8 @@ input[type=submit]{
     .card__all__serv{
         justify-content: center;
         position: relative;
-        background-color: #000000;
+        background-color: #1a1c23;
         margin: 10px;
-        border-style: groove;
-        border-color: white;
     }
     
     .card__inimg__serv{
@@ -705,6 +699,10 @@ input[type=submit]{
         padding: 10px;
         font-size: 15px;
     }
+
+    .footer-col{
+        padding-bottom: 16px;
+    }
 }
 
 
@@ -716,8 +714,6 @@ input[type=submit]{
 @media screen and (max-width: 320px){
     *{
         background-color: #1a1c23;  
-        width: 320px;
-        
     }
 
 
@@ -783,10 +779,7 @@ input[type=submit]{
     
     .card__all__serv{
         position: relative;
-        background-color: #000000;
         margin: 10px;
-        border-style: groove;
-        border-color: white;
     }
     
     .card__in__serv{
