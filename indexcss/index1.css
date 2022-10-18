@@ -25,31 +25,53 @@ body{
 
 /* -------------------------------------- HEADER -------------------------------------- */
 
-header{
+.header *{
+    background-color: #000000;
     grid-area: header;
-    background: black;
-    border-color: black;
+}
+
+.headerr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+}
+
+
+.header-logo{
     display:flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-between;
 }
 
-.header__logo{
+.header-logo-img{
+ width: 70px;
+ padding: 0px 0px 10px 0px;
+}
+
+
+.header-logo-title{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
+    color:white;
+    padding-left: 3px;
+    font-size: 4rem;
     width: auto;
-    transform: translateX(30px);
-    background-color: black;
-    
 }
+
+
+.nav-text-m0{
+    margin: 0px;
+}
+
 
 
 nav{
     background-color: #000000;
+}
+
+.nav-li{
+    height:40px;
 }
 .background-in{
     background: #000000;
@@ -433,9 +455,10 @@ input[type=submit]{
 /*  -----------------------------------------------   MEDIA QUERY    --------------------------------------------*/
 @media screen and (max-width: 1400px){
    
-    header{
+    .headerr{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 }
 /**-------------------------------------   1024px -------------------------------**/
@@ -469,19 +492,6 @@ input[type=submit]{
     }
 
 
-   
-    header{
-        display: flex;
-        flex-direction: column;
-    
-    }
-    .header__logo{
-        padding: 10px 10px 10px 10px;
-        width: 470px;
-        height: auto;
-        margin-left: 10px;
-        transform: translateX(0px);
-    }
 
     .publici{
         width: 600px;
@@ -544,16 +554,7 @@ input[type=submit]{
      input[type=submit]{
          color: white;
      }
-    .footer__all{
-        display: block;
-    }
-    .footer__text{
-        padding-top: 2px;
-    }
-    .footer__text1{
-        margin-top: 10px;
-    }
-    
+
     .card__all__serv{
         position: relative;
         background-color: #000000;
@@ -581,22 +582,6 @@ input[type=submit]{
         font-size: 2rem;
     }
 
-    .footer__lista{
-        display: flex;
-        background-color: #000000;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .footer__item{
-        margin:1rem 3rem 1rem 1rem ;
-    }
-    
-    .footerimg{
-        background-color: #000000;
-        width: auto;
-        height:50px;
-    }
 }
 
 
@@ -612,31 +597,24 @@ input[type=submit]{
         background-color: #1a1c23;
     }
 
+    .header-logo-title{
+        display: flex;
+        flex-wrap: wrap;
+        color:white;
+        padding-left: 3px;
+        font-size: 2rem;
+        width: auto;
+    }
+    .header-logo-img{
+        width: 40px;
+        padding: 0px 0px 10px 0px;
+       }
+
     .roww{
         display: flex;
         flex-direction: column;
     }
 
-
-    .footer-col{
-        padding: 10px;
-
-    }
-    
-
-
-
-    .publici__text__container{
-        position: absolute; 
-        display: flex;
-        flex-direction: column; 
-        top:30%;
-        left:5%;
-        width: auto;
-        background: none;
-        text-align: center;
-        
-    }
 
     section{
         justify-content: center;
