@@ -31,6 +31,11 @@ body{
     grid-area: header;
 }
 
+.header {
+    background-color: black;
+    grid-area: header;
+}
+
 
 .headerr{
     display: flex;
@@ -306,14 +311,17 @@ article:hover{
     font-family: 'Poppins', sans-serif;
 }
 
-.container *{
-    background-color: #1a1c23;
+.footer{
+    background-color: #000000;
 }
+
+
 
 .roww{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+   
 }
 
 ul{
