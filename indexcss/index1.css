@@ -23,7 +23,9 @@ body{
     background-color: #1a1c23;
 }
 
-
+.container{
+    padding: 0;
+}
 /* -------------------------------------- HEADER -------------------------------------- */
 
 .header *{
@@ -38,6 +40,7 @@ body{
 
 
 .headerr{
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,6 +80,7 @@ body{
 
 nav{
     background-color: #000000;
+    width: auto;
 }
 
 .nav-li{
@@ -734,6 +738,7 @@ input[type=submit]{
         background-color: #1a1c23;  
     }
 
+    
 
     section{
         justify-content: center;
