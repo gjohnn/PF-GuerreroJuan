@@ -1,0 +1,33 @@
+.header *{
+    background-color: #000000;
+    grid-area: header;
+}
+
+.header{
+    background-color: black;
+    .headerr{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        .header-logo{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1rem;
+            .header-logo-img{
+                width: 70px;
+                padding: 0px 0px 10px 0px;
+            }
+            .header-logo-title{
+                display: flex;
+                flex-wrap: wrap;
+                color:white;
+                padding-left: 3px;
+                font-size: 4rem;
+                width: auto;
+            }
+        } 
+    }
+}

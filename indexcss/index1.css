@@ -13,6 +13,7 @@ h2{
     margin:10px;
 
 }
+
 body{
     display: grid;
     grid-template-areas: "header" "main" "footer";
@@ -27,50 +28,6 @@ body{
     padding: 0;
 }
 /* -------------------------------------- HEADER -------------------------------------- */
-
-.header *{
-    background-color: #000000;
-    grid-area: header;
-}
-
-.header {
-    background-color: black;
-    grid-area: header;
-}
-
-
-.headerr{
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    
-}
-
-
-.header-logo{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 1rem;
-}
-
-.header-logo-img{
- width: 70px;
- padding: 0px 0px 10px 0px;
-}
-
-
-.header-logo-title{
-    display: flex;
-    flex-wrap: wrap;
-    color:white;
-    padding-left: 3px;
-    font-size: 4rem;
-    width: auto;
-}
-
 
 .nav-text-m0{
     margin: 0px;
@@ -309,124 +266,6 @@ article:hover{
 
 /* ------------------------------------ FOOTER --------------------------------------------------- */
 
-.footer *{
-    padding: 10px 0px;
-    background: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer{
-    background-color: #000000;
-}
-
-
-
-.roww{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
-}
-
-ul{
-    list-style: none;
-}
-
-
-.footer-col{
-    color: white;
-    margin: 0px;
-    padding: 0rem;
-    background-color:none;
-    display:inline-block;
-    width: auto;;
-}
-
-.footer-col ul{
-    
-    padding:0rem;
-    margin: 0px;
-}
-.footer-col li{
-    padding:0rem;
-    margin: 0;
-    color:grey;
-    transition: all 0.5s;
-}
-
-.footer-col li:hover{
-    padding-left: 1px;
-    color: white;
-}
-
-.footer-col a {
-    margin:0;
-    padding: 0;
-    text-decoration: none;
-    color:grey;
-    transition: all 0.5s;
-}
-
-.footer-col a:hover{
-    color: white;
-}
-
-.footer-col h4{
-    font-size: 18px;
-    color: white;
-    font-weight: 500;
-    margin-bottom: 15px;
-    position: relative;
-    padding: 10px 0px 10px 0px;
-    text-align: start;
-    text-transform: capitalize;
-    border-bottom: solid white 2px;
-  
-}
-
-.social-links{
-    padding: 0;
-}
-
-.footer-col .social-links ul{
-    display: flex;
-    flex-direction: row;
-
-}
-
-
-.footer-col .social-links a{
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    display: inline-block;
-    background-color:grey;
-    margin-right: 10px;
-    color:white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    transition: all 0.5s ;
-}
-
-.footer-col .social-links a:hover{
-    background-color: white;
-}
-
-.footer-col .social-links i{
-    text-align: center;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    color:white;
-    background: none;
-    transition: all 0.5s;
-}
-
-.footer-col .social-links i:hover{
-    color:black;
-    
-}
     
 /* -------------------------------------- INPUT ------------------------------------------- */
 
