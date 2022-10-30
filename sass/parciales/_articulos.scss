@@ -1,0 +1,122 @@
+.background-in{
+    background: #000000;
+    background-color: #000000;
+
+}
+
+.background-trans{
+    background: none;
+}
+
+h5{
+    background: none;
+}
+p{
+    background: none;
+}
+
+.cartbien{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: Orbitron , sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-bottom: solid 2px white;
+}
+
+.main__title{
+    font-family: Orbitron , sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    border-bottom: solid 2px white;
+    padding: 0px 0px 3px 5px;
+}
+
+section{
+    font-family: Orbitron, sans-serif;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article{
+    background-color: #000000;
+    position: relative;
+    margin: 2rem;
+    height: 370px;
+    width: 320px;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: border 0.25s;
+    &:hover{
+        border-color: blue;
+    }
+    .card__imgcontainer_prod{
+        width: auto;
+        height:200px;
+        border-radius: 15px 15px 0px 0px;
+        .card__img__prod{
+            height: 200px;
+            padding: 10px;
+            width: auto;
+            border-radius: 10px;
+        }
+    }
+    .card__text__prod{
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+        margin: 5px;
+        width: auto;
+    }
+    .card__price__prod{
+        background-color: #000000;
+        text-align: left;
+        position: absolute;
+        font-size: 1.2rem;
+        bottom: 10px;
+        left: 1rem;
+        width: auto;
+    }
+    .card__imgcontainer_new{
+        width: auto;
+        height:180px;
+        border-radius: 12px 12px 0px 0px;
+        overflow: hidden;
+        background-color: #000000;
+        .card__img__new{
+            height: 180px;
+            width: auto;
+        }
+    }
+    .card__text__new{
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+        margin: 1rem 3px 3px 3px;
+        width: auto;
+    }
+    .card__date__new{
+        background-color: #000000;
+        text-align: left;
+        position: absolute;
+        font-size: 1.2rem;
+        bottom: 10px;
+        left: 1rem;
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px){
+    section{
+        justify-content: center;
+    }
+}
+
+
+

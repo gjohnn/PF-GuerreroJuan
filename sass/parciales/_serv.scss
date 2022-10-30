@@ -1,0 +1,48 @@
+@mixin imgcontserv{
+    width: 700px;
+    height: auto;
+    margin:1rem;
+}
+@mixin textserv{
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    width: auto;
+}
+
+
+.card__all__serv{
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1c23;
+    margin: 1rem;
+    .card__in__serv{
+        justify-content: space-around;
+        align-items:center ;
+        display: flex;
+        border: solid 2px white;
+        .card__inimg__serv{
+            @include imgcontserv;
+        }
+
+        p{
+            @include textserv;
+        }
+    }
+    .card__in__serv1{
+        @extend .card__in__serv;
+        flex-direction: row-reverse;
+        .card__inimg__serv{
+            @include imgcontserv;
+        } 
+        p{
+            @include textserv;
+        }
+    }
+}
+
+
+
+
+
+
