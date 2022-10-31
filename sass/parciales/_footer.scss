@@ -71,6 +71,7 @@
                     ul{
                         display: flex;
                         flex-direction: row;
+                        justify-content: space-between;
                     }
                     a{
                         height: 40px;
@@ -92,7 +93,6 @@
                         text-align: center;
                         height: 40px;
                         width: 40px;
-                        text-align: center;
                         color:white;
                         background: none;
                         transition: all 0.5s;

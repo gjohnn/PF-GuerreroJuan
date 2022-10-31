@@ -2,6 +2,7 @@
     width: 700px;
     height: auto;
     margin:1rem;
+    overflow: hidden;
 }
 @mixin textserv{
     color:white;
@@ -9,8 +10,6 @@
     font-size: 30px;
     width: auto;
 }
-
-
 .card__all__serv{
     display: flex;
     flex-direction: column;

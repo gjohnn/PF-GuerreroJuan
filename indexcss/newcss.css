@@ -28,10 +28,18 @@ body {
 
 .header * {
   background-color: #000000;
-  grid-area: header; }
+  grid-area: header;
+  width: auto; }
+
+.icoham {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0; }
 
 .header {
-  background-color: black; }
+  background-color: black;
+  width: auto; }
   .header .headerr {
     width: auto;
     display: flex;
@@ -59,9 +67,6 @@ nav {
   width: auto; }
   nav .nav-li {
     height: 40px; }
-  nav .navbar-toggler-icon {
-    background-color: #000000;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
 .background-in {
   background: #000000;
@@ -140,7 +145,7 @@ article {
   article .card__imgcontainer_new {
     width: auto;
     height: 180px;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
     overflow: hidden;
     background-color: #000000; }
     article .card__imgcontainer_new .card__img__new {
@@ -178,7 +183,8 @@ article {
     .card__all__serv .card__in__serv .card__inimg__serv, .card__all__serv .card__in__serv1 .card__inimg__serv {
       width: 700px;
       height: auto;
-      margin: 1rem; }
+      margin: 1rem;
+      overflow: hidden; }
     .card__all__serv .card__in__serv p, .card__all__serv .card__in__serv1 p {
       color: white;
       text-align: center;
@@ -189,7 +195,8 @@ article {
     .card__all__serv .card__in__serv1 .card__inimg__serv {
       width: 700px;
       height: auto;
-      margin: 1rem; }
+      margin: 1rem;
+      overflow: hidden; }
     .card__all__serv .card__in__serv1 p {
       color: white;
       text-align: center;
@@ -376,7 +383,8 @@ input[type=submit] {
       padding: 0px; }
       .footer-col .social-links ul {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        justify-content: space-between; }
       .footer-col .social-links a {
         height: 40px;
         width: 40px;
@@ -395,7 +403,6 @@ input[type=submit] {
         text-align: center;
         height: 40px;
         width: 40px;
-        text-align: center;
         color: white;
         background: none;
         transition: all 0.5s; }
@@ -429,10 +436,7 @@ input[type=submit] {
         height: auto; }
     .card__all__serv .card__in__serv1 {
       flex-direction: column;
-      overflow: hidden; }
-      .card__all__serv .card__in__serv1 .card__inimg__serv {
-        height: 350px;
-        height: auto; } }
+      overflow: hidden; } }
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -440,6 +444,8 @@ input[type=submit] {
     margin: 5px; }
   h2 {
     font-size: 1.6rem; }
+  .cartbien {
+    font-size: 1.5rem; }
   .header .headerr .header-logo .header-logo-img {
     width: 40px;
     padding: 0px 0px 10px 0px; }
@@ -478,8 +484,9 @@ input[type=submit] {
   h2 {
     font-size: 1rem; }
   .header .headerr .header-logo .header-logo-title {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .main__title {
+    width: 300px;
     font-size: 1.3rem; }
   section {
     justify-content: center;

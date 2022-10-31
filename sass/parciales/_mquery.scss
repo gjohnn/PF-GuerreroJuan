@@ -32,17 +32,14 @@
                 height: auto;
             }
         }
-        .card__in__serv1{
+    .card__in__serv1{
             flex-direction: column;
             overflow: hidden;
-            .card__inimg__serv{
-                height: 350px;
-                height: auto;
             }
-        }
     }
-    
 }
+    
+
 
 @media screen and (max-width: 768px){
     h1{
@@ -52,6 +49,9 @@
 
     h2{
         font-size: 1.6rem;
+    }
+    .cartbien{
+        font-size: 1.5rem;  
     }
     .header .headerr .header-logo .header-logo-img{
         width: 40px;
@@ -104,7 +104,6 @@
 }
 
 @media screen and (max-width: 320px){
-
     h1{
         font-size: 1rem;
     }
@@ -112,11 +111,13 @@
     h2{
         font-size: 1rem;
     }
+    
     .header .headerr .header-logo .header-logo-title{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
      .main__title{
+        width: 300px;
         font-size: 1.3rem;
     }
 
