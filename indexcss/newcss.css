@@ -28,7 +28,6 @@ body {
 
 .header * {
   background-color: #000000;
-  grid-area: header;
   width: auto; }
 
 .icoham {
@@ -40,6 +39,7 @@ body {
   border-radius: 12px; }
 
 .header {
+  grid-area: header;
   background-color: black;
   width: auto; }
   .header .headerr {
