@@ -8,12 +8,12 @@
      flex-direction: column;
      justify-content: center;
      text-align: center;
+     overflow: hidden;
      & div h2{
         padding: 0px 1rem 0px 1rem;
     }
  }
  
-
  .form-label{
      font-size: 2rem;
  }

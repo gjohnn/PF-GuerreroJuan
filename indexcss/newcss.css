@@ -176,7 +176,8 @@ article {
   display: flex;
   flex-direction: column;
   background-color: #1a1c23;
-  margin: 1rem; }
+  margin: 1rem;
+  overflow: hidden; }
   .card__all__serv .card__in__serv, .card__all__serv .card__in__serv1 {
     justify-content: space-around;
     align-items: center;
@@ -213,7 +214,8 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .section__form1 div h2 {
     padding: 0px 1rem 0px 1rem; }
 
