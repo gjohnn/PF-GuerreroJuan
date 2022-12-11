@@ -40,14 +40,14 @@ body {
 
 .header {
   grid-area: header;
-  background-color: #e41111;
+  background-color: black;
   width: auto; }
   .header .headerr {
     width: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #e40f0f; }
+    background-color: #000000; }
     .header .headerr .header-logo {
       display: flex;
       align-items: center;

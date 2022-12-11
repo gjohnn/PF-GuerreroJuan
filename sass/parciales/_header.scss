@@ -12,14 +12,14 @@
   }
 .header{
     grid-area: header;
-    background-color: rgb(228, 17, 17);
+    background-color: rgb(0, 0, 0);
     width: auto;
     .headerr{
         width: auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #e40f0f;
+        background-color: #000000;
         .header-logo{
             display:flex;
             align-items: center;
