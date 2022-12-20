@@ -48,7 +48,7 @@ if (usu == ("cliente")|| usu==("Cliente")){
         {id:41, emp: "Pablo"},
     ]
 
-    let empid = parseInt(prompt("Ingrese ID"))
+    
     
     
 
