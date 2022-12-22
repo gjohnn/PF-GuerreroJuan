@@ -40,6 +40,24 @@ let plant = `Hola soy ${nom} tengo ${pert} manzanas`
 
 console.log(plant);
 */
+function show (msj){
+    console.log(msj);
+}
+const trabajadores = [];
+
+let nom = prompt("Ingrese nombre")
+
+trabajadores.push(nom);
+
+let veri = prompt("Desea agregar más? (Si/No)")
+
+while ((veri == "Si")||(veri == "si")){
+    trabajadores.push(prompt("Ingrese nombre"))
+    veri = prompt("Desea agregar más? (Si/No)")
+}
+if ((veri == ("No"))||(veri =="no")){
+    show(trabajadores);
+}
 
 
 

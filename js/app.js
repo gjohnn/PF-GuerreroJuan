@@ -39,50 +39,71 @@ if (usu == ("cliente")|| usu==("Cliente")){
     showprod();
     cuotas();
 }else if (usu == ("vendedor")||usu==("Vendedor")){
-  
-    let trabajadores = [
-        {id:37, emp: "Juan"},
-        {id:56, emp: "Martín"},
-        {id:12, emp: "María"},
-        {id:67, emp: "Ana"},
-        {id:41, emp: "Pablo"},
-    ]
-
-    
-    
-    
-
-
-    //pusher
-    function cargarel(arr,el){
-        arr.push(el);
-    }
-    //MOTHERBOARD
     const motherss = []
     const mother1 = {nom:"H610", precio: 15000, stock:5};
     const mother2 = {nom:"Z690", precio: 90000, stock:5};
     const mother3 = {nom:"H610", precio: 15000, stock:5};
-
-    cargarel(motherss,mother1);
-    cargarel(motherss,mother2);
-    cargarel(motherss,mother3);
-
-    for(const mother of motherss){
-        console.log(mother.nom);
-        console.log("$"+mother.precio);
-        console.log("Stock: "+mother.stock);
-    }
-    //GPU
     const gpuss = [];
     const gpu1 = {nom:"RTX 3070", precio:170000, stock:15};
     const gpu2 = {nom:"RTX 3080 TI", precio:250000, stock:15};
     const gpu3 = {nom:"RTX 4080", precio:400000, stock:15};
-    cargarel(gpuss,gpu1);
-    cargarel(gpuss,gpu2);
-    cargarel(gpuss,gpu3);
-    for(const gpu of gpuss){
-        console.log(gpu.nom);
-        console.log("$"+gpu.precio);
-        console.log("Stock: "+gpu.stock);
-    }
+    
+    const trabajadores = ["Juan","Martín","María","Ana","Pablo"];
+   nom = prompt("Ingrese nombre")
+   while (nom==""){
+    nom = prompt("Ingrese nombre correcto")
+   }
+
+   let trabveri = trabajadores.includes(nom)
+
+   if (trabveri == true){
+    console.log("Bienvenido, "+ nom);
+       //pusher
+       function cargarel(arr,el){
+           arr.push(el);
+       }
+       //MOTHERBOARD
+    
+       cargarel(motherss,mother1);
+       cargarel(motherss,mother2);
+       cargarel(motherss,mother3);
+    
+       for(const mother of motherss){
+           console.log(mother.nom);
+           console.log("$"+mother.precio);
+           console.log("Stock: "+mother.stock);
+       }
+       //GPU
+       cargarel(gpuss,gpu1);
+       cargarel(gpuss,gpu2);
+       cargarel(gpuss,gpu3);
+       for(const gpu of gpuss){
+           console.log(gpu.nom);
+           console.log("$"+gpu.precio);
+           console.log("Stock: "+gpu.stock);
+       }
+
+       let eleveri = parseInt(prompt("Añadir motherboard = 1 ; gpu = 2"))
+
+       if (eleveri == 1){
+            motherss.push(prompt("Ingrese nombre"))
+            veri = prompt("Desea agregar más? (Si/No)")
+            while ((veri == "Si")||(veri == "si")){
+            motherss.push(prompt("Ingrese nombre"))
+            veri = prompt("Desea agregar más? (Si/No)")
+        }
+       }else if (eleveri==2){
+            motherss.push(prompt("Ingrese gpu"))
+            veri = prompt("Desea agregar más? (Si/No)")
+            while ((veri == "Si")||(veri == "si")){
+            gpuss.push(prompt("Ingrese gpu"))
+            veri = prompt("Desea agregar más? (Si/No)")
+            }
+       }
+
+
+   }else{
+    alert("Usuario no válido")
+   }
+
 }
