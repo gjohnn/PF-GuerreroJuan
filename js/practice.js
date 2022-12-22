@@ -12,6 +12,7 @@ append: para agregar al flujo => document.body.append(parrafo)
 document.body.appendChild(parrafo): append al hijo 
 document.body.prependChild(parrafo) : al principio lo agrega
 
+.querySelector : 
 .className: agregar clases desde js
 .remove(); : elimina el elemento dinámico tmb puedo [....]
 
@@ -27,5 +28,19 @@ for(const nombre of personas){
     lista.append(li);
 }segun array
 
+-- Plantillas literales =>  ` `
+let concatenado = "hola soy "+ nom + " tengo " + 5 + " manzanas"
+console.log(concatenado)
+//-PERO-
+//interpolacion de variables
+nom = "pepe"
+pert = 5
 
+let plant = `Hola soy ${nom} tengo ${pert} manzanas`
+
+console.log(plant);
 */
+
+
+
+
