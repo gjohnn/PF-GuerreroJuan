@@ -1,4 +1,4 @@
-
+//Indentificar tipo de usuario
 let usu = prompt("Ingrese tipo de usuario (Cliente/Vendedor)")
 while (usu == ""){
     usu = prompt("Ingrese tipo de usuario (Cliente/Vendedor)");
@@ -18,7 +18,7 @@ if (usu == ("cliente")|| usu==("Cliente")){
     while((cuota<0) ||(cuota>12)|| (cuota==1) || (cuota==2) || (cuota>=4 && cuota<=5) || (cuota>=7 && cuota<=11)){
         cuota = parseInt(prompt("Ingrese las cuotas (3, 6 o 12) en las que desea pagar, ingrese 0 si desea en efectivo/transferencia bancaria."));
     }
-    
+    //cuotas
     function cuotas(){
         if (cuota==0){
         precio = precio*0.90 
@@ -39,71 +39,78 @@ if (usu == ("cliente")|| usu==("Cliente")){
     showprod();
     cuotas();
 }else if (usu == ("vendedor")||usu==("Vendedor")){
-    const motherss = []
-    const mother1 = {nom:"H610", precio: 15000, stock:5};
-    const mother2 = {nom:"Z690", precio: 90000, stock:5};
-    const mother3 = {nom:"H610", precio: 15000, stock:5};
-    const gpuss = [];
-    const gpu1 = {nom:"RTX 3070", precio:170000, stock:15};
-    const gpu2 = {nom:"RTX 3080 TI", precio:250000, stock:15};
-    const gpu3 = {nom:"RTX 4080", precio:400000, stock:15};
+
     
-    const trabajadores = ["Juan","Martín","María","Ana","Pablo"];
-   nom = prompt("Ingrese nombre")
-   while (nom==""){
-    nom = prompt("Ingrese nombre correcto")
-   }
-
-   let trabveri = trabajadores.includes(nom)
-
-   if (trabveri == true){
-    console.log("Bienvenido, "+ nom);
-       //pusher
-       function cargarel(arr,el){
-           arr.push(el);
-       }
-       //MOTHERBOARD
-    
-       cargarel(motherss,mother1);
-       cargarel(motherss,mother2);
-       cargarel(motherss,mother3);
-    
-       for(const mother of motherss){
-           console.log(mother.nom);
-           console.log("$"+mother.precio);
-           console.log("Stock: "+mother.stock);
-       }
-       //GPU
-       cargarel(gpuss,gpu1);
-       cargarel(gpuss,gpu2);
-       cargarel(gpuss,gpu3);
-       for(const gpu of gpuss){
-           console.log(gpu.nom);
-           console.log("$"+gpu.precio);
-           console.log("Stock: "+gpu.stock);
-       }
-
-       let eleveri = parseInt(prompt("Añadir motherboard = 1 ; gpu = 2"))
-
-       if (eleveri == 1){
-            motherss.push(prompt("Ingrese nombre"))
-            veri = prompt("Desea agregar más? (Si/No)")
-            while ((veri == "Si")||(veri == "si")){
-            motherss.push(prompt("Ingrese nombre"))
-            veri = prompt("Desea agregar más? (Si/No)")
+    //base de datos
+    class Producto{
+        constructor(id,marca,nombre,cat,precio){
+            this.id = id;
+            this.marca = marca;
+            this.nombre = nombre;
+            this.cat = cat;
+            this.precio = precio;
         }
-       }else if (eleveri==2){
-            motherss.push(prompt("Ingrese gpu"))
-            veri = prompt("Desea agregar más? (Si/No)")
-            while ((veri == "Si")||(veri == "si")){
-            gpuss.push(prompt("Ingrese gpu"))
-            veri = prompt("Desea agregar más? (Si/No)")
+        pushto(){
+            prodarray.push(this);
+        }
+    }
+    
+    const prodarray = [];
+    const mother1 = new Producto (1,"Asus ROG STRIX", "B450-F", "Motherboard", 51000);
+    mother1.pushto();
+    const mother2 = new Producto (2,"Gigabyte", "Z590", "Motherboard", 95000);
+    mother2.pushto();
+    const mother3 = new Producto (3,"Asus ROG STRIX", " X570-E WIFI II", "Motherboard", 110000);
+    mother3.pushto();
+    const gpu1 = new Producto (4,"AMD", "Rx 580", "GPU", 50000);
+    gpu1.pushto();
+    const gpu2 = new Producto (5,"NVIDIA", "Rtx 3080 TI", "GPU", 220000);
+    gpu2.pushto();
+    const gpu3 = new Producto (6,"AMD", "Rx 7900 XTX", "GPU", 400000);
+    gpu3.pushto();
+    
+    //Verificar si  el trabajor es de la empresa
+    const trabajadores = ["Juan","Martín","María","Ana","Pablo"];
+    nom = prompt("Ingrese nombre")
+    while (nom==""){
+        nom = prompt("Ingrese nombre correcto")
+    }
+    let trabveri = trabajadores.includes(nom)
+    if (trabveri == true){
+        console.log("Bienvenido, "+ nom);
+        console.log(prodarray);
+        //pedir si quiere agregar productos
+        let veriagregar = prompt("Agregar producto? (Si/No)")
+        while (veriagregar==""){
+            veriagregar = prompt("Agregar producto? (Si/No)")
+        }
+        if (veriagregar=="Si"||veriagregar=="si"||veriagregar=="SI"){
+            function agregar(){
+                prodarray.push(nuevoproducto)
             }
-       }
+            do {
+                let prodid = parseInt(prompt("Ingrese ID del producto"));
+                /* No encontre la forma todavia de validar el ID
+                while (prodidverif == true){
+                let prodidverif = prodarray.includes(prodid);
+                    prodid = parseInt(prompt("ID ocupado, ingrese otro"));
+                    prodidverif = prodarray.filter(prodid);
+                }*/
+                let prodmarca = prompt("Ingrese marca del producto");
+                let prodnom = prompt("Ingrese nombre del producto");
+                let prodcat = prompt("Ingrese categoría del producto");
+                let prodprecio = prompt("Ingrese precio del producto");
+                alert("Listo!");
+                nuevoproducto = new Producto (prodid,prodmarca,prodnom,prodcat,prodprecio)
+                agregar();
+                veriagregar = prompt("Desea agregar otro producto? (Si/No)")
+            } while (veriagregar =="Si"||veriagregar =="si"||veriagregar =="SI");
+            console.log(prodarray);
+        }else if (veriagregar == "No"||veriagregar=="no"||veriagregar=="NO"){
+            console.log(prodarray);
+        }
 
-
-   }else{
+   }else
     alert("Usuario no válido")
    }
 
-}
