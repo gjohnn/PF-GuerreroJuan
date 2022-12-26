@@ -1,7 +1,7 @@
 /*
 ---------------------------------------- DOM -------------------------------------------------
 getElemnetsByTagName
-getElemntesByClass
+getElemntesByClassName
 getElementsById
 innerText: agrega al contenedor de html
 innerHTML : cambia el html
@@ -40,24 +40,37 @@ let plant = `Hola soy ${nom} tengo ${pert} manzanas`
 
 console.log(plant);
 */
-function show (msj){
-    console.log(msj);
+
+const btnsaludo = document.getElementById("saludogen");
+function saludo(){
+    let nom = prompt("Ingrese su nombre")
+    alert("Hola, "+ nom);
 }
-const trabajadores = [];
+//btnsaludo.addEventListener("click",saludo);
 
-let nom = prompt("Ingrese nombre")
 
-trabajadores.push(nom);
+btnsaludo.onclick = saludo;
 
-let veri = prompt("Desea agregar más? (Si/No)")
+const codigo = document.getElementById(`titulo`);
 
-while ((veri == "Si")||(veri == "si")){
-    trabajadores.push(prompt("Ingrese nombre"))
-    veri = prompt("Desea agregar más? (Si/No)")
+
+
+const arrayprueba = [
+    "moco","papo"
+]
+codigo.onclick =()=>{
+    console.log(arrayprueba);
 }
-if ((veri == ("No"))||(veri =="no")){
-    show(trabajadores);
-}
+
+
+
+
+
+
+
+
+
+
 
 
 

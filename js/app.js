@@ -99,7 +99,7 @@ if (usu == ("cliente")|| usu==("Cliente")){
                 let prodmarca = prompt("Ingrese marca del producto");
                 let prodnom = prompt("Ingrese nombre del producto");
                 let prodcat = prompt("Ingrese categoría del producto");
-                let prodprecio = prompt("Ingrese precio del producto");
+                let prodprecio = parseInt(prompt("Ingrese precio del producto"));
                 alert("Listo!");
                 nuevoproducto = new Producto (prodid,prodmarca,prodnom,prodcat,prodprecio)
                 agregar();
