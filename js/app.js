@@ -120,6 +120,9 @@ if (usu == ("cliente")|| usu==("Cliente")){
         }
       //Filtrar
       let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
+      while (verifilt = ""){
+        verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
+      }
       if (verifilt == 2){
           let buscar = prompt("Buscar por nombre...")
           const filt = prodarray.filter(item =>item.nombre === buscar)
