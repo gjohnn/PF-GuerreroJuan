@@ -39,7 +39,7 @@ pert = 5
 let plant = `Hola soy ${nom} tengo ${pert} manzanas`
 
 console.log(plant);
-*/
+
 
 const btnsaludo = document.getElementById("saludogen");
 function saludo(){
@@ -61,6 +61,61 @@ const arrayprueba = [
 codigo.onclick =()=>{
     console.log(arrayprueba);
 }
+*/
+class Producto{
+    constructor(id,marca,nombre,cat,precio){
+        this.id = id;
+        this.marca = marca;
+        this.nombre = nombre;
+        this.cat = cat;
+        this.precio = precio;
+    }
+    pushto(){
+        prodarray.push(this);
+    }
+}
+
+const prodarray = [];
+const mother1 = new Producto (1,"Asus ROG STRIX", "B450-F", "MOTHERBOARD", 51000);
+mother1.pushto();
+const mother2 = new Producto (2,"Gigabyte", "Z590", "MOTHERBOARD", 95000);
+mother2.pushto();
+const mother3 = new Producto (3,"Asus ROG STRIX", " X570-E WIFI II", "MOTHERBOARD", 110000);
+mother3.pushto();
+const gpu1 = new Producto (4,"AMD", "Rx 580", "GPU", 50000);
+gpu1.pushto();
+const gpu2 = new Producto (5,"NVIDIA", "Rtx 3080 TI", "GPU", 220000);
+gpu2.pushto();
+const gpu3 = new Producto (6,"AMD", "Rx 7900 XTX", "GPU", 400000);
+gpu3.pushto();
+
+
+    let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
+    if (verifilt == 2){
+        let buscar = prompt("Buscar por nombre...")
+        const filt = prodarray.filter(item =>item.nombre === buscar)
+        console.log(filt);
+    }else if (verifilt == 1){
+        let buscar = prompt("Buscar por categoria...")
+        const filt = prodarray.filter(item =>item.cat === buscar)
+        console.log(filt);
+    }
+
+
+/*let verielim = prompt(`Eliminar producto?`)
+    if (verielim == "Si" || verielim == "SI"||verielim == "si"){
+        function elim(){
+            const index = prodarray.findIndex(item => item.nombre === elimprodnom);
+            prodarray.splice(index, 1)
+        }
+
+        do{
+            elimprodnom = prompt("Ingrese el nombre del producto que quiere eliminar")
+            elim();
+            verielim = prompt(`Eliminar otro producto?`)
+        }while (verielim == "Si" || verielim == "SI"||verielim == "si")
+        console.log(prodarray);
+    }*/
 
 
 

@@ -90,12 +90,6 @@ if (usu == ("cliente")|| usu==("Cliente")){
             }
             do {
                 let prodid = parseInt(prompt("Ingrese ID del producto"));
-                /* No encontre la forma todavia de validar el ID
-                while (prodidverif == true){
-                let prodidverif = prodarray.includes(prodid);
-                    prodid = parseInt(prompt("ID ocupado, ingrese otro"));
-                    prodidverif = prodarray.filter(prodid);
-                }*/
                 let prodmarca = prompt("Ingrese marca del producto");
                 let prodnom = prompt("Ingrese nombre del producto");
                 let prodcat = prompt("Ingrese categoría del producto");
@@ -109,7 +103,32 @@ if (usu == ("cliente")|| usu==("Cliente")){
         }else if (veriagregar == "No"||veriagregar=="no"||veriagregar=="NO"){
             console.log(prodarray);
         }
-
+        //Eliminar producto
+        let verielim = prompt(`Eliminar producto?`)
+        if (verielim == "Si" || verielim == "SI"||verielim == "si"){
+            function elim(){
+                const index = prodarray.findIndex(item => item.nombre === elimprodnom);
+                prodarray.splice(index, 1)
+            }
+            
+            do{
+                elimprodnom = prompt("Ingrese el nombre del producto que quiere eliminar")
+                elim();
+                verielim = prompt(`Eliminar otro producto?`)
+            }while (verielim == "Si" || verielim == "SI"||verielim == "si")
+            console.log(prodarray);
+        }
+      //Filtrar
+      let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
+      if (verifilt == 2){
+          let buscar = prompt("Buscar por nombre...")
+          const filt = prodarray.filter(item =>item.nombre === buscar)
+          console.log(filt);
+      }else if (verifilt == 1){
+          let buscar = prompt("Buscar por categoria...")
+          const filt = prodarray.filter(item =>item.cat === buscar)
+          console.log(filt);
+      }
    }else
     alert("Usuario no válido")
    }
