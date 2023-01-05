@@ -71,7 +71,7 @@ if (usu == ("cliente")|| usu==("Cliente")){
     
     //Verificar si  el trabajor es de la empresa
     const trabajadores = ["Juan","Martín","María","Ana","Pablo"];
-    nom = prompt("Ingrese nombre")
+    let nom = prompt("Ingrese nombre")
     while (nom==""){
         nom = prompt("Ingrese nombre correcto")
     }
@@ -80,46 +80,24 @@ if (usu == ("cliente")|| usu==("Cliente")){
         console.log("Bienvenido, "+ nom);
         console.log(prodarray);
         //pedir si quiere agregar productos
-        let veriagregar = prompt("Agregar producto? (Si/No)")
-        while (veriagregar==""){
-            veriagregar = prompt("Agregar producto? (Si/No)")
-        }
-        if (veriagregar=="Si"||veriagregar=="si"||veriagregar=="SI"){
             function agregar(){
                 prodarray.push(nuevoproducto)
             }
-            do {
-                let prodid = parseInt(prompt("Ingrese ID del producto"));
-                let prodmarca = prompt("Ingrese marca del producto");
-                let prodnom = prompt("Ingrese nombre del producto");
-                let prodcat = prompt("Ingrese categoría del producto");
-                let prodprecio = parseInt(prompt("Ingrese precio del producto"));
-                alert("Listo!");
+                let prodid = parseInt(document.getElementById("prodid"));
+                let prodmarca = document.getElementById("prodmarca");
+                let prodnom = document.getElementById("prodname");
+                let prodcat = document.getElementById("prodcat");
+                let prodprecio = parseInt(document.getElementById("prodprecio"));
                 nuevoproducto = new Producto (prodid,prodmarca,prodnom,prodcat,prodprecio)
                 agregar();
-                veriagregar = prompt("Desea agregar otro producto? (Si/No)")
-            } while (veriagregar =="Si"||veriagregar =="si"||veriagregar =="SI");
-            console.log(prodarray);
-        }else if (veriagregar == "No"||veriagregar=="no"||veriagregar=="NO"){
-            console.log(prodarray);
-        }
         //Eliminar producto
-        let verielim = prompt(`Eliminar producto?`)
-        if (verielim == "Si" || verielim == "SI"||verielim == "si"){
+
             function elim(){
                 const index = prodarray.findIndex(item => item.nombre === elimprodnom);
                 prodarray.splice(index, 1)
-            }
-            
-            do{
-                elimprodnom = prompt("Ingrese el nombre del producto que quiere eliminar")
-                elim();
-                verielim = prompt(`Eliminar otro producto?`)
-            }while (verielim == "Si" || verielim == "SI"||verielim == "si")
-            console.log(prodarray);
-        }
+            } 
       //Filtrar
-      let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
+      /*let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
       while (verifilt = ""){
         verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
       }
@@ -131,7 +109,7 @@ if (usu == ("cliente")|| usu==("Cliente")){
           let buscar = prompt("Buscar por categoria...")
           const filt = prodarray.filter(item =>item.cat === buscar)
           console.log(filt);
-      }
+      }*/
    }else
     alert("Usuario no válido")
    }
