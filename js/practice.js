@@ -57,14 +57,14 @@ const codigo = document.getElementById(`titulo`);
 
 
 const arrayprueba = [
-    "moco","papo"
+    "moco","pape"
 ]
 codigo.onclick =()=>{
     console.log(arrayprueba);
 }
 */
-class Producto {
-    constructor(id, marca, nombre, cat, precio) {
+class Producto{
+    constructor(id, marca, nombre, cat, precio){
         this.id = id;
         this.marca = marca;
         this.nombre = nombre;
@@ -76,65 +76,66 @@ class Producto {
     }
 }
 
+function show(msj){
+    console.log(msj);
+    
+}
 const prodarray = [];
-const mother1 = new Producto(1, "Asus ROG STRIX", "B450-F", "MOTHERBOARD", 51000);
-mother1.pushto();
-const mother2 = new Producto(2, "Gigabyte", "Z590", "MOTHERBOARD", 95000);
-mother2.pushto();
-const mother3 = new Producto(3, "Asus ROG STRIX", " X570-E WIFI II", "MOTHERBOARD", 110000);
-mother3.pushto();
-const gpu1 = new Producto(4, "AMD", "Rx 580", "GPU", 50000);
-gpu1.pushto();
-const gpu2 = new Producto(5, "NVIDIA", "Rtx 3080 TI", "GPU", 220000);
-gpu2.pushto();
-const gpu3 = new Producto(6, "AMD", "Rx 7900 XTX", "GPU", 360000);
-gpu3.pushto();
-
-const prodarrayjson = JSON.stringify(prodarray);
-localStorage.setItem("Productos", prodarrayjson);
-let getprodarray = JSON.parse(localStorage.getItem("Productos"))
+const prod1 = new Producto(1, "Asus ROG STRIX", "B450-F", "MOTHERBOARD", 51000);
+prod1.pushto();
+const prod2 = new Producto(2, "Gigabyte", "Z590", "MOTHERBOARD", 95000);
+prod2.pushto();
+const prod3 = new Producto(3, "Asus ROG STRIX", " X570-E WIFI II", "MOTHERBOARD", 110000);
+prod3.pushto();
+const prod4 = new Producto(4, "AMD", "Rx 580", "GPU", 50000);
+prod4.pushto();
+const prod5 = new Producto(5, "NVIDIA", "Rtx 3080 TI", "GPU", 220000);
+prod5.pushto();
+const prod6 = new Producto(6, "AMD", "Rx 7900 XTX", "GPU", 360000);
+prod6.pushto();
 
 
 
-/*function elim() {
+function elim(){
     const index = prodarray.findIndex(item => item.nombre === elimprodname);
-    prodarray.splice(index, 1)
-}
+    prodarray.splice(index, 1)}
 
-let searchnom = document.getElementById("searchprodname").value;
-const searchnomm = () => {
-    prodarray.filter(item => item.nombre === searchprodname)
-    console.log(sear);
+function ValidarSinEspacio(dato){
+    while (dato == ""){
+        show("Faltan datos");
+    }
 }
-let searchcat = document.getElementById("searchprodcat").value;
-const searchcatt = () => {
-    prodarray.filter(item => item.cat === searchcat)
-}
+//coding for searching
+const formsearch = document.getElementById("formsearch")
 let btnsearchadmin = document.getElementById("btnsearchadmin")
-btnsearchadmin.onclick = prodarray.filter(item => item.cat === searchcat)*/
+btnsearchadmin.addEventListener("click",function(e){
+    e.preventDefault;
+    let searchname = document.getElementById("searchprodname").value;
+    const searchprod = prodarray.filter(item => item.nombre === searchname)
+    show(searchprod);
+    formsearch.reset();
+});
+
 
 
 //Coding for add product
-function addprod(OBJ){
-    prodarray.push(OBJ);
-}
-
-
-const formadd = document.getElementById("formadd");
-formadd.addEventListener("submit",function(){
-    
-    let prodid = parseInt(document.getElementById("aprodid").value);
+const formadd = document.getElementById("formadd")
+const btnadd = document.getElementById("agregarprod");
+show(prodarray);
+btnadd.addEventListener("click", function(e){
+    e.preventDefault;
+    let prodid = document.getElementById("aprodid").value;
+    ValidarSinEspacio(prodid);
     let prodmarca = document.getElementById("aprodmarca").value;
     let prodnom = document.getElementById("aprodname").value;
     let prodcat = document.getElementById("aprodcat").value;
-    let prodprecio = parseInt(document.getElementById("aprodprecio").value);
-    let newprod = new Producto(prodid, prodmarca, prodnom, prodcat, prodprecio)
-    addprod(newprod);
-    alert("Se añadio el objeto");
-    formadd.reset()
+    let prodprecio = document.getElementById("aprodprecio").value;
+    let newprod = new Producto(prodid, prodmarca, prodnom, prodcat, prodprecio);
+    prodarray.push(newprod);
+    show(newprod);
+    formadd.reset();
 });
    
-console.log(prodarray);
 /*Coding for delete product
 let elimprodname = document.getElementById("eprodname").value;
 let btndelete = document.getElementById("deleteprod");
@@ -177,6 +178,7 @@ if (verielim == "Si" || verielim == "SI"||verielim == "si"){
     console.log(prodarray);
 }*/
 
+//coding for product cards
 
 
 

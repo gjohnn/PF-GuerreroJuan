@@ -77,27 +77,30 @@
       <!----ADMIN STUFF---->
       <div>
         <h2 id=saludogen data-aos="fade-right" class="main__title ">Buscar productos</h2>
-        <form action="" method="GET" enctype="text/plain"  >
+        <form action="" method="GET" enctype="text/plain" id="formsearch">
           <div class="row">
             <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000"
               class="col-sm-6">
               <label class="form-label" for="name">Categoría</label>
               <br>
-              <input type="text" name="name" id="searchprodcat">
+              <input type="text" name="searchprodcat">
             </div>
             <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000"
               class="col-sm-6">
               <label class="form-label" for="name">Nombre</label>
               <br>
-              <input type="text" name="name" id="searchprodname">
+              <input type="text" id="searchprodname">
             </div>
           </div>
         </form>
-        <button type="submit" class="btn btn-info" id="btnsearchadmin">Buscar</button>
+        <div class="d-flex">
+          <button type="button" class="btn btn-info col-sm-6"" id="btnsearchadmin" >Buscar</button>
+          <button type="button" class="btn btn-info col-sm-6"" id="btnsearchadmin">Buscar</button>
+        </div>
       </div>
       <div>
         <h2 id=saludogen data-aos="fade-right" class="main__title"  >Agregar productos</h2>
-        <form action="" method="GET" enctype="text/plain" id="formadd" name="addobject">
+        <form action="" method="GET" enctype="text/plain" id="formadd">
           <div class="row">
             <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000"
               class="col-sm-4">
@@ -130,8 +133,8 @@
               <input type="text" name="name" id="aprodprecio">
             </div>
           </div>
-          <button type="submit" class="btn btn-success" id="agregarprod">Agregar</button>
         </form>
+        <button type="button" class="btn btn-success" id="agregarprod">Agregar</button>
       </div>
       <div>
         <h2 id=saludogen data-aos="fade-right" class="main__title ">Eliminar producto</h2>
