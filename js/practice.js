@@ -63,13 +63,15 @@ codigo.onclick =()=>{
     console.log(arrayprueba);
 }
 */
+
 class Producto{
-    constructor(id, marca, nombre, cat, precio){
+    constructor(id, marca, nombre, cat, precio, prodimage){
         this.id = id;
         this.marca = marca;
         this.nombre = nombre;
         this.cat = cat;
         this.precio = precio;
+        this.prodimage = prodimage;
     }
     pushto() {
         prodarray.push(this);
@@ -81,30 +83,36 @@ function show(msj){
     
 }
 const prodarray = [];
-const prod1 = new Producto(1, "Asus ROG STRIX", "B450-F", "MOTHERBOARD", 51000);
+//MOTHERBOARD
+const prod1 = new Producto(1, "ASUS PRIME", "B560M-A Intel 11ª 10ª LGA1200", "MOTHERBOARD", 50000, "prod1.png");
 prod1.pushto();
-const prod2 = new Producto(2, "Gigabyte", "Z590", "MOTHERBOARD", 95000);
+const prod2 = new Producto(2, "GIGABYTE", "A520M-H AMD AM4", "MOTHERBOARD", 95000, "prod2.png");
 prod2.pushto();
-const prod3 = new Producto(3, "Asus ROG STRIX", " X570-E WIFI II", "MOTHERBOARD", 110000);
+const prod3 = new Producto(3, "GIGABYTE", "B450 AORUS M AMD AM4", "MOTHERBOARD", 110000, "prod3.png");
 prod3.pushto();
-const prod4 = new Producto(4, "AMD", "Rx 580", "GPU", 50000);
+const prod4 = new Producto(4, "ASUS ROG STRIX", "Z590-E WIFI Bluetooth ATX ARGB Intel 11ª 10ª LGA1200", "MOTHERBOARD", 110000, "prod4.png");
 prod4.pushto();
-const prod5 = new Producto(5, "NVIDIA", "Rtx 3080 TI", "GPU", 220000);
+//RAM
+const prod5 = new Producto (5, "Crucial", "Crucial Basics DDR4 8GB 2666mhz CL19", "MEMORIA RAM", 11000, "prod5.png");
 prod5.pushto();
-const prod6 = new Producto(6, "AMD", "Rx 7900 XTX", "GPU", 360000);
+const prod6 = new Producto (6, "Patriot", "Viper Steel DDR4 8GB 3600MHz CL20", "MEMORIA RAM", 17000, "prod6.png");
 prod6.pushto();
+const prod7 = new Producto (7, "Patriot", "Viper Steel RGB DDR4 8GB 3600MHz CL20", "MEMORIA RAM", 27000, "prod7.png");
+prod7.pushto();
+const prod8 = new Producto (8, "PNY", "XLR8 RGB DDR4 16GB 3200MHz CL16 Negra", "MEMORIA RAM", 25000, "prod8.png");
+prod8.pushto();
+//GPU
+const prod9 = new Producto(9, "GIGABYTE", "RX 580 8GB GDDR5", "GPU", 55000, "prod9.png");
+prod9.pushto();
+const prod10 = new Producto(10, "EVGA", "RTX 3070 EVGA 8GB GDRR6", "GPU", 180000, "prod10.png");
+prod10.pushto();
+const prod11 = new Producto(11, "ASROCK", "AMD Radeon RX 6800 XT 16GB", "GPU", 155000, "prod11.png");
+prod11.pushto();
+const prod12 = new Producto(12, "MSI", "Radeon RX 6600 XT MECH 2X 8G OC", "GPU", 100000, "prod12.png");
+prod12.pushto();
 
 
 
-function elim(){
-    const index = prodarray.findIndex(item => item.nombre === elimprodname);
-    prodarray.splice(index, 1)}
-
-function ValidarSinEspacio(dato){
-    while (dato == ""){
-        show("Faltan datos");
-    }
-}
 //coding for searching
 const formsearch = document.getElementById("formsearch")
 let btnsearchadmin = document.getElementById("btnsearchadmin")
@@ -136,49 +144,35 @@ btnadd.addEventListener("click", function(e){
     formadd.reset();
 });
    
-/*Coding for delete product
-let elimprodname = document.getElementById("eprodname").value;
+//Coding for delete product
+const formdelete = document.getElementById("formdelete");
 let btndelete = document.getElementById("deleteprod");
-btndelete.onclick = elim();*/
+btndelete.addEventListener("click", function(e){
+    e.preventDefault();
+    let elimprodname = document.getElementById("eprodname").value;
+    const index = prodarray.findIndex(item => item.nombre === elimprodname);
+    prodarray.splice(index, 1);
+    console.log("Producto eliminado");
+    show(prodarray)
+    formdelete.reset();
+})
 
+//Product card
+let sectioncard = document.getElementById("card");
 
-
-
-
-
-
-
-
-
-
-/*let verifilt = prompt("Buscar productos? (Categoria = 1 / Nombre = 2)")
-if (verifilt == 2){
-    let buscar = prompt("Buscar por nombre...")
-    const filt = prodarray.filter(item =>item.nombre === buscar)
-    console.log(filt);
-}else if (verifilt == 1){
-    let buscar = prompt("Buscar por categoria...")
-    const filt = prodarray.filter(item =>item.cat === buscar)
-    console.log(filt);
+for(const prod of prodarray){
+let contentsectioncard = document.createElement("ARTICLE")
+sectioncard.appendChild(contentsectioncard)
+contentsectioncard.innerHTML = `
+<div class="card__imgcontainer_prod">
+<img class="card__img__prod" src="../prod/prodimg/${prod.prodimage}"></div>
+<div class="card__text">
+<div class="card__text__prod">${prod.nombre}</div>
+<div class="card__price__prod">$${prod.precio}</div></div>`
 }
 
 
-let verielim = prompt(`Eliminar producto?`)
-if (verielim == "Si" || verielim == "SI"||verielim == "si"){
-    function elim(){
-        const index = prodarray.findIndex(item => item.nombre === elimprodnom);
-        prodarray.splice(index, 1)
-    }
 
-    do{
-        elimprodnom = prompt("Ingrese el nombre del producto que quiere eliminar")
-        elim();
-        verielim = prompt(`Eliminar otro producto?`)
-    }while (verielim == "Si" || verielim == "SI"||verielim == "si")
-    console.log(prodarray);
-}*/
-
-//coding for product cards
 
 
 

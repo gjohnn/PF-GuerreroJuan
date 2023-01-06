@@ -107,47 +107,51 @@ section {
   justify-content: space-around; }
 
 article {
-  background-color: #000000;
+  background: none;
   position: relative;
   margin: 2rem;
   height: 370px;
-  width: 320px;
+  width: 280px;
   text-align: center;
   justify-content: center;
   border-style: solid;
   border-color: white;
   overflow: hidden;
-  border-radius: 1rem;
   transition: border 0.25s; }
   article:hover {
     border-color: blue; }
   article .card__imgcontainer_prod {
+    justify-content: center;
     width: auto;
     height: 200px;
-    border-radius: 15px 15px 0px 0px; }
+    margin: 3px;
+    overflow: hidden; }
     article .card__imgcontainer_prod .card__img__prod {
       height: 200px;
       padding: 10px;
       width: auto;
       border-radius: 10px; }
-  article .card__text__prod {
-    background-color: black;
-    text-align: center;
-    justify-content: center;
-    margin: 5px;
-    width: auto; }
-  article .card__price__prod {
+  article .card__text {
     background-color: #000000;
-    text-align: left;
-    position: absolute;
-    font-size: 1.2rem;
-    bottom: 10px;
-    left: 1rem;
-    width: auto; }
+    margin: 1px; }
+    article .card__text .card__text__prod {
+      background: none;
+      text-align: center;
+      justify-content: center;
+      margin: 10px 5px 5px 5px;
+      width: auto;
+      height: 160px; }
+    article .card__text .card__price__prod {
+      background: none;
+      text-align: left;
+      position: absolute;
+      font-size: 1.2rem;
+      bottom: 13px;
+      left: 0.5rem;
+      width: auto; }
   article .card__imgcontainer_new {
     width: auto;
     height: 180px;
-    border-radius: 11px 11px 0px 0px;
     overflow: hidden;
     background-color: #000000; }
     article .card__imgcontainer_new .card__img__new {

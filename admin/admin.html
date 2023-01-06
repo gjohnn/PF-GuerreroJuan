@@ -73,10 +73,13 @@
     </div>
   </header>
   <main class="mainn container">
+    <section id="card">
+      
+    </section>
     <div class="section__form1">
       <!----ADMIN STUFF---->
       <div>
-        <h2 id=saludogen data-aos="fade-right" class="main__title ">Buscar productos</h2>
+        <h2 data-aos="fade-right" class="main__title ">Buscar productos</h2>
         <form action="" method="GET" enctype="text/plain" id="formsearch">
           <div class="row">
             <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000"
@@ -93,11 +96,10 @@
             </div>
           </div>
         </form>
-        <div class="d-flex">
-          <button type="button" class="btn btn-info col-sm-6"" id="btnsearchadmin" >Buscar</button>
-          <button type="button" class="btn btn-info col-sm-6"" id="btnsearchadmin">Buscar</button>
+        <div class="d-flex justify-content-around"">
+          <button type="button" class="btn btn-info g-col-2 col-sm-2" id="btnsearchadmin">Buscar</button>
+          <button type="button" class="btn btn-info g-col-2 col-sm-2" id="btnsearchadmin">Buscar</button>
         </div>
-      </div>
       <div>
         <h2 id=saludogen data-aos="fade-right" class="main__title"  >Agregar productos</h2>
         <form action="" method="GET" enctype="text/plain" id="formadd">
@@ -138,7 +140,7 @@
       </div>
       <div>
         <h2 id=saludogen data-aos="fade-right" class="main__title ">Eliminar producto</h2>
-        <form action="" method="GET" enctype="text/plain">
+        <form action="" method="GET" enctype="text/plain" id="formdelete">
           <div class="row">
             <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1000"
               class="col-sm-12">
@@ -147,9 +149,8 @@
               <input type="text" name="name" id="eprodname">
             </div>
           </div>
-          <button type="submit" class="btn btn-danger" id="deleteprod">Eliminar</button>
-
         </form>
+        <button type="submit" class="btn btn-danger" id="deleteprod">Eliminar</button>
       </div>
     </div>
   </main>

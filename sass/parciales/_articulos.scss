@@ -42,25 +42,26 @@ section{
 }
 
 article{
-    background-color: #000000;
+    background:none;
     position: relative;
     margin: 2rem;
     height: 370px;
-    width: 320px;
+    width: 280px;
     text-align: center;
     justify-content: center;
     border-style: solid;
     border-color: white;
     overflow: hidden;
-    border-radius: 1rem;
     transition: border 0.25s;
     &:hover{
         border-color: blue;
     }
     .card__imgcontainer_prod{
+        justify-content: center;
         width: auto;
         height:200px;
-        border-radius: 15px 15px 0px 0px;
+        margin: 3px;
+        overflow: hidden;
         .card__img__prod{
             height: 200px;
             padding: 10px;
@@ -68,26 +69,31 @@ article{
             border-radius: 10px;
         }
     }
-    .card__text__prod{
-        background-color: black;
+    .card__text{
+        background-color: #000000;
+        margin: 1px;
+        .card__text__prod{
+        background: none;
         text-align: center;
         justify-content: center;
-        margin: 5px;
+        margin: 10px 5px 5px 5px;
         width: auto;
-    }
-    .card__price__prod{
-        background-color: #000000;
+        height: 160px;
+        }
+        .card__price__prod{
+        background: none;
         text-align: left;
         position: absolute;
         font-size: 1.2rem;
-        bottom: 10px;
-        left: 1rem;
+        bottom: 13px;
+        left: 0.5rem;
         width: auto;
+        }
     }
+    
     .card__imgcontainer_new{
         width: auto;
         height:180px;
-        border-radius: 11px 11px 0px 0px;
         overflow: hidden;
         background-color: #000000;
         .card__img__new{
